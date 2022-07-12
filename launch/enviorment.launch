@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<launch> 
+  <param name="/use_sim_time" value="true" />
+  <arg name="cfg" default="cave"/>
+  <include file="$(find stage_ros)/launch/world.launch"/>
+  <include file="$(find tuw_local_planner)/launch/self_localization_fake.launch"/>
+  <include file="$(find tuw_local_planner)/launch/map_server.launch">
+    <arg name="room" value="$(arg cfg)" />
+  </include>
+  <include file="$(find tuw_local_planner)/launch/rviz.launch">
+    <arg name="cfg" value="$(arg cfg)" />
+  </include>
+</launch>
