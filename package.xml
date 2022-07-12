@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>Local Planner in Python</name>
+  <name>tuw_local_planner</name>
   <version>0.0.0</version>
   <description>The tuw_local_planner package</description>
 
